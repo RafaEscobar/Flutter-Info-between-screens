@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:navigate_between_screens/presentation/screens/screen_four.dart';
 
 class ScreenThree extends StatelessWidget{
   const ScreenThree({super.key});
 
   @override
   Widget build(BuildContext context){
-    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Envio de datos'),
@@ -19,7 +19,13 @@ class ScreenThree extends StatelessWidget{
                 style: const ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(Colors.blue)
                 ),
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.push(
+                    context, MaterialPageRoute(
+                      builder: (context) => ScreenFour(code: '#A$index')
+                    )
+                  );
+                },
                 child: Text(
                   'Código de caja #A$index',
                   textAlign: TextAlign.center,
