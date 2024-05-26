@@ -13,14 +13,28 @@ class ScreenOne extends StatelessWidget {
       title: const Text('Primera pantalla'),
      ),
      body: Center(
-      child: ElevatedButton(
-        onPressed: (){
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const ScreenTwo()),
-          );
-        },
-        child: const Text('Continuar')
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ScreenTwo()),
+              );
+            },
+            child: const Text('Ir a pantalla 2')
+          ),
+          ElevatedButton(
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ScreenTwo()),
+              );
+            },
+            child: const Text('Ir a pantalla 3')
+          ),
+        ],
       ),
      ),
     );
