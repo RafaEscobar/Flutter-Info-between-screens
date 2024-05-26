@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigate_between_screens/presentation/screens/screen_three.dart';
 import 'package:navigate_between_screens/presentation/screens/screen_two.dart';
 
 class ScreenOne extends StatelessWidget {
@@ -29,7 +30,7 @@ class ScreenOne extends StatelessWidget {
             onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const ScreenTwo()),
+                MaterialPageRoute(builder: (context) => const ScreenThree()),
               );
             },
             child: const Text('Ir a pantalla 3')

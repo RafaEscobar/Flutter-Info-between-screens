@@ -5,6 +5,7 @@ class ScreenThree extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Envio de datos'),
@@ -12,7 +13,25 @@ class ScreenThree extends StatelessWidget{
       body: Center(
         child: ListView.builder(
           itemCount: 10,
-          itemBuilder: (context, index) => Text('Número $index'),
+          itemBuilder: (context, index) => Column(
+            children: [
+              TextButton(
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.blue)
+                ),
+                onPressed: (){},
+                child: Text(
+                  'Código de caja #A$index',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10,)
+            ],
+          )
         )
       ),
     );
